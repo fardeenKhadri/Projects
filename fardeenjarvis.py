@@ -4,30 +4,30 @@ import os
 import webbrowser
 import datetime
 import random
-# import openai
+ import openai
 
-# def ai(query):
-#     openai.api_key = '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'
-#     text = f"Artificial Intelligence response of Question: {query}\n**********\n\n"
-#     response = openai.ChatCompletion.create(
-#         model="gpt-3.5-turbo",
-#         prompt=query,
-#         temperature=0.7,
-#         max_tokens=1000,
-#         top_p=1.0,
-#         frequency_penalty=0,
-#         presence_penalty=0
-#     )
-#     text += response['choices'][0]['message']['content']
+ def ai(query):
+     openai.api_key = ''
+     text = f"Artificial Intelligence response of Question: {query}\n**********\n\n"
+     response = openai.ChatCompletion.create(
+         model="gpt-3.5-turbo",
+         prompt=query,
+         temperature=0.7,
+         max_tokens=1000,
+         top_p=1.0,
+         frequency_penalty=0,
+         presence_penalty=0
+     )
+     text += response['choices'][0]['message']['content']
 
-#     if not os.path.exists("Aiopen"):
-#         os.mkdir("Aiopen")
+     if not os.path.exists("Aiopen"):
+         os.mkdir("Aiopen")
 
-#     with open(f"C:/Users/win10/PycharmProjects/JarvisAI/data/AI_generated_text_{random.randint(1, 789622354785)}.txt",
-#               "w") as f:
-#         f.write(text)
+     with open(f"#define the path for a folder to save the document{random.randint(1, 789622354785)}.txt",
+               "w") as f:
+         f.write(text)
 
-#     return text
+     return text
 
 def say(text):
     engine = pyttsx3.init()
@@ -69,9 +69,9 @@ def main():
                 say('Hope I will see you soon again')
                 exit()
 
-            # if "artificial intelligence" in query.lower():
-            #     response_text = ai(query)
-            #     say(response_text)
+             if "artificial intelligence" in query.lower():
+                 response_text = ai(query)
+                 say(response_text)
 
             sites = [["youtube", "https://www.youtube.com"], ["wikipedia", "https://www.wikipedia.com"],
                      ["google", "https://www.google.com"], ["Instagram", "https://www.instagram.com"]]
@@ -82,7 +82,7 @@ def main():
                     webbrowser.open(site[1])
 
             if "open music" in query.lower():
-                path_music = "G:\my fav song"
+                path_music = "" #define the music folder path
                 os.startfile(path_music)
 
             if "the time" in query.lower():
@@ -90,7 +90,7 @@ def main():
                 say(f"The time now is {timenow}")
 
             if "open code" in query.lower():
-                path_code = r"C:\Users\win10\AppData\Local\Programs\Microsoft VS Code\Code.exe"
+                path_code = r"" #define the path here VsCode
                 os.startfile(path_code)
 
             if "any update".lower() in query.lower():
