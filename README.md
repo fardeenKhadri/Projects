@@ -37,7 +37,7 @@ Python Libraries
 
 Note that this was created using openai api keys, even if the openai part is removed the code will run with only 1 reduced functionality 
 
-****Other Dependencies
+**Other Dependencies**
 - A microphone for capturing user input.
 - OpenAI API key for GPT integration (replace `openai.api_key = ''` with your actual key).
 - Internet connection for using OpenAI and browsing websites.
